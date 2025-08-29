@@ -344,7 +344,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### ⭐ If this project helped you learn something new, please give it a star! ⭐
 
-**[🔗 View Live Demo](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform)** | **[📖 Documentation](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/wiki)** | **[🐛 Report Bug](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/issues)**
+**[📖 Documentation](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/wiki)** | **[🐛 Report Bug](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/issues)**
 
 *Built with ❤️ for the developer community*
 
