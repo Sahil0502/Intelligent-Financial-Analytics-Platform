@@ -1,253 +1,303 @@
-# Intelligent Financial Analytics Platform
+# 🏦 Intelligent Financial Analytics Platform
 
-A comprehensive real-time financial analytics platform built with Spring Boot, React, and machine learning capabilities for stock market analysis, portfolio management, and predictive analytics.
+A comprehensive real-time financial analytics platform built with **Spring Boot**, **React**, and **machine learning** capabilities for stock market analysis, portfolio management, and predictive analytics.
 
-## 🚀 Features
+[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.5-brightgreen.svg)](https://spring.io/projects/spring-boot)
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-### Core Functionality
-- **Real-time Stock Data**: Live stock quotes and market updates using Finnhub API
-- **Portfolio Management**: Create and manage investment portfolios with real-time tracking
-- **LSTM Predictions**: Machine learning-powered stock price predictions
-- **Sentiment Analysis**: News sentiment analysis using Stanford CoreNLP
-- **Interactive Dashboard**: Modern, responsive dashboard with live charts and metrics
-- **WebSocket Integration**: Real-time data streaming for live market updates
+## 🌟 Project Highlights
 
-### Technical Features
-- **RESTful APIs**: Comprehensive backend API for all financial operations
-- **Real-time Updates**: WebSocket-based live data broadcasting
-- **Database Integration**: H2 in-memory database for development, PostgreSQL for production
-- **Rate Limiting**: API rate limiting for optimal performance
-- **Responsive Design**: Mobile-friendly React frontend with Bootstrap
-- **Animation Effects**: Smooth animations using Framer Motion
+> **Perfect for demonstrating full-stack development skills, real-time systems, and financial technology expertise**
+
+- **Real-time Financial Data Processing** with WebSocket streaming
+- **Machine Learning Integration** using LSTM neural networks for price prediction
+- **Modern Full-Stack Architecture** with Spring Boot + React
+- **Professional UI/UX Design** with responsive layout and smooth animations
+- **Enterprise-Grade Features** including API rate limiting, database management, and error handling
+
+## 🚀 Key Features
+
+### 📊 **Real-Time Analytics**
+- Live stock market data streaming via WebSocket
+- Interactive charts and visualizations using Chart.js
+- Real-time portfolio valuation and performance tracking
+- Market sentiment analysis with Stanford CoreNLP
+
+### 🤖 **Machine Learning**
+- LSTM neural networks for stock price prediction
+- Sentiment analysis for market news and social media
+- Historical pattern recognition and trend analysis
+- Prediction accuracy scoring and model validation
+
+### 💼 **Portfolio Management**
+- Multi-portfolio creation and management
+- Real-time asset allocation tracking
+- Performance analytics with risk assessment
+- Automated portfolio rebalancing suggestions
+
+### 🔄 **Live Data Integration**
+- Finnhub API integration for real-time market data
+- WebSocket-based live updates across all clients
+- Automated data fetching with scheduled jobs
+- Rate-limited API calls for optimal performance
 
 ## 🛠️ Technology Stack
 
-### Backend
-- **Java 17** - Modern Java features and performance
-- **Spring Boot 3.1.5** - Enterprise-grade framework
-- **Spring Data JPA** - Database abstraction layer
-- **Spring WebSocket** - Real-time communication
-- **H2 Database** - In-memory database for development
-- **PostgreSQL** - Production database
-- **Stanford CoreNLP** - Natural language processing
-- **Quartz Scheduler** - Job scheduling for data updates
-- **Maven** - Dependency management
+### **Backend Architecture**
+```
+Spring Boot 3.1.5 + Java 17
+├── Spring Data JPA (Database Layer)
+├── Spring WebSocket (Real-time Communication)
+├── Spring Security (Authentication & Authorization)
+├── Quartz Scheduler (Automated Jobs)
+├── Stanford CoreNLP (Natural Language Processing)
+└── Maven (Dependency Management)
+```
 
-### Frontend
-- **React 18** - Modern UI library
-- **React Router** - Client-side routing
-- **Bootstrap 5** - Responsive design framework
-- **Chart.js** - Interactive charts and graphs
-- **Framer Motion** - Smooth animations
-- **Axios** - HTTP client for API calls
-- **WebSocket Client** - Real-time data reception
+### **Frontend Architecture**
+```
+React 18 + Modern JavaScript
+├── React Router (Navigation)
+├── Chart.js (Data Visualization)
+├── Framer Motion (Animations)
+├── Bootstrap 5 (Responsive Design)
+├── Axios (HTTP Client)
+└── WebSocket Client (Real-time Updates)
+```
 
-### External APIs
-- **Finnhub API** - Real-time stock market data
-- **WebSocket Streaming** - Live market updates
+### **Data & APIs**
+- **Database**: H2 (Development) / PostgreSQL (Production)
+- **External APIs**: Finnhub (Market Data), News APIs
+- **Real-time**: WebSocket streaming for live updates
+- **ML Libraries**: Custom LSTM implementation for predictions
 
-## 📋 Prerequisites
+## 📱 Live Demo
 
-Before running this application, make sure you have:
+### Dashboard Overview
+- **Real-time Market Data**: Live stock prices, market indices, and trading volumes
+- **Portfolio Analytics**: Performance metrics, asset allocation, and P&L tracking
+- **Interactive Charts**: Candlestick, line charts, and technical indicators
+- **News Sentiment**: Real-time sentiment analysis of market news
 
-- **Java 17 or higher** installed
-- **Node.js 16 or higher** and npm
-- **Maven 3.6+** for building the backend
-- **Git** for version control
-- **Finnhub API Key** (free registration required)
+### Key Screens
+1. **Dashboard** - Overview of markets and portfolios
+2. **Stock Analysis** - Detailed stock research with charts and predictions
+3. **Portfolio Manager** - Portfolio creation and management tools
+4. **Predictions** - ML-powered price forecasting
+5. **Sentiment Analysis** - Market sentiment tracking
 
-## 🔧 Installation & Setup
+## � Quick Start Guide
 
-### 1. Clone the Repository
+### Prerequisites
+- Java 17+ and Maven 3.6+
+- Node.js 16+ and npm
+- Git for version control
+- [Finnhub API Key](https://finnhub.io/) (free registration)
+
+### 1️⃣ Clone & Setup
 ```bash
+# Clone the repository
 git clone https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform.git
 cd Intelligent-Financial-Analytics-Platform
-```
 
-### 2. Backend Setup
-
-#### Configure Application Properties
-Navigate to `backend/src/main/resources/application.yml` and configure:
-
-```yaml
-# Database Configuration (H2 for development)
-spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password: password
-
-# Server Configuration
-server:
-  port: 8080
-  servlet:
-    context-path: /api
-
-# External API Configuration
-finnhub:
-  api:
-    key: YOUR_FINNHUB_API_KEY_HERE
-    base-url: https://finnhub.io/api/v1
-```
-
-#### Build and Run Backend
-```bash
+# Backend setup
 cd backend
 mvn clean install
+# Configure your Finnhub API key in application.yml
 mvn spring-boot:run
-```
 
-Or run using the JAR file:
-```bash
-java -jar target/analytics-platform-0.0.1-SNAPSHOT.jar
-```
-
-The backend will start on `http://localhost:8080`
-
-### 3. Frontend Setup
-
-#### Install Dependencies
-```bash
+# Frontend setup (in new terminal)
 cd frontend
 npm install
-```
-
-#### Start Development Server
-```bash
 npm start
 ```
 
-The frontend will start on `http://localhost:3000`
+### 2️⃣ Access Application
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8080/api
+- **H2 Database Console**: http://localhost:8080/h2-console
 
-## 🔑 API Configuration
-
-### Finnhub API Key Setup
-1. Register for a free account at [Finnhub.io](https://finnhub.io/)
-2. Get your API key from the dashboard
-3. Replace `YOUR_FINNHUB_API_KEY_HERE` in the application.yml file
-
-## 📱 Usage
-
-### Accessing the Application
-1. Start the backend server (port 8080)
-2. Start the frontend development server (port 3000)
-3. Open your browser and navigate to `http://localhost:3000`
-
-### Main Features
-
-#### Dashboard
-- View real-time market overview
-- Monitor portfolio performance
-- Track live stock updates
-- Interactive charts and metrics
-
-#### Stock Analysis
-- Real-time stock quotes
-- Historical price charts
-- Technical indicators
-- Market sentiment analysis
-
-#### Portfolio Management
-- Create and manage portfolios
-- Add/remove stock holdings
-- Track investment performance
-- Real-time portfolio valuation
-
-#### Predictions
-- LSTM-based price predictions
-- Machine learning insights
-- Forecast accuracy metrics
-- Historical prediction analysis
-
-## 🏗️ Project Structure
-
-```
-Intelligent-Financial-Analytics-Platform/
-├── backend/                          # Spring Boot backend
-│   ├── src/main/java/
-│   │   └── com/financial/analytics/
-│   │       ├── controller/           # REST controllers
-│   │       ├── service/              # Business logic
-│   │       ├── model/                # Entity classes
-│   │       ├── repository/           # Data access layer
-│   │       ├── dto/                  # Data transfer objects
-│   │       └── config/               # Configuration classes
-│   ├── src/main/resources/
-│   │   ├── application.yml           # Application configuration
-│   │   └── application-prod.yml      # Production configuration
-│   └── pom.xml                       # Maven dependencies
-├── frontend/                         # React frontend
-│   ├── src/
-│   │   ├── components/               # React components
-│   │   ├── services/                 # API services
-│   │   ├── App.js                    # Main application component
-│   │   └── index.js                  # Application entry point
-│   ├── public/                       # Static assets
-│   └── package.json                  # npm dependencies
-├── database-setup.sql                # Database schema
-├── setup-database.bat               # Database setup script
-└── README.md                        # Project documentation
+### 3️⃣ API Configuration
+Update `backend/src/main/resources/application.yml`:
+```yaml
+finnhub:
+  api:
+    key: YOUR_API_KEY_HERE
+    base-url: https://finnhub.io/api/v1
 ```
 
-## 🔌 API Endpoints
+## 🏗️ Architecture & Design
 
-### Stock Data
-- `GET /api/stocks/symbols` - Get available stock symbols
-- `GET /api/stocks/{symbol}/quote` - Get real-time quote
-- `GET /api/stocks/{symbol}/recent` - Get recent price history
-- `GET /api/stocks/recent-updates` - Get recent market updates
+### System Architecture
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   React Client  │◄──►│   Spring Boot    │◄──►│  External APIs  │
+│                 │    │     Backend      │    │   (Finnhub)     │
+├─────────────────┤    ├──────────────────┤    ├─────────────────┤
+│ • Dashboard     │    │ • REST APIs      │    │ • Stock Data    │
+│ • Charts        │    │ • WebSocket      │    │ • Market News   │
+│ • Real-time UI  │    │ • ML Processing  │    │ • Real-time     │
+│ • Portfolio Mgmt│    │ • Database       │    │   Streaming     │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                       │
+         └───────────────────────┘
+              WebSocket Connection
+```
 
-### Portfolio Management
-- `GET /api/portfolios` - Get all portfolios
-- `POST /api/portfolios` - Create new portfolio
-- `PUT /api/portfolios/{id}` - Update portfolio
-- `DELETE /api/portfolios/{id}` - Delete portfolio
-- `POST /api/portfolios/{id}/holdings` - Add stock holding
+### Project Structure
+```
+📦 Intelligent-Financial-Analytics-Platform
+├── 🍃 backend/                    # Spring Boot Application
+│   ├── 📁 src/main/java/com/financial/analytics/
+│   │   ├── 🎮 controller/         # REST API Controllers
+│   │   ├── 🔧 service/            # Business Logic Layer
+│   │   ├── 📊 model/              # JPA Entity Classes
+│   │   ├── 🗄️ repository/         # Data Access Layer
+│   │   ├── 📤 dto/                # Data Transfer Objects
+│   │   └── ⚙️ config/             # Configuration Classes
+│   └── 📁 src/main/resources/
+│       ├── application.yml        # App Configuration
+│       └── application-prod.yml   # Production Config
+├── ⚛️ frontend/                   # React Application
+│   ├── 📁 src/
+│   │   ├── 🧩 components/         # React Components
+│   │   ├── 🌐 services/           # API Integration
+│   │   ├── App.js                 # Main Component
+│   │   └── index.js               # Entry Point
+│   └── package.json               # Dependencies
+├── 🗃️ database-setup.sql         # Database Schema
+└── 📖 README.md                   # Documentation
+```
 
-### Predictions
-- `POST /api/predictions/stock` - Get stock price prediction
-- `GET /api/predictions/accuracy` - Get prediction accuracy metrics
+## 🔌 API Documentation
 
-### Sentiment Analysis
-- `POST /api/sentiment/analyze` - Analyze text sentiment
-- `GET /api/sentiment/news/{symbol}` - Get news sentiment for symbol
+### Core Endpoints
 
-## 🌐 WebSocket Endpoints
+#### 📈 Stock Data APIs
+```http
+GET    /api/stocks/{symbol}/quote          # Real-time stock quote
+GET    /api/stocks/{symbol}/history        # Historical price data
+POST   /api/stocks/predict                 # ML price predictions
+GET    /api/stocks/recent-updates          # Recent market activity
+```
 
-Real-time data streaming:
-- `/ws/stock-updates` - Live stock price updates
-- `/ws/portfolio-updates` - Portfolio value changes
-- `/ws/market-news` - Breaking market news
+#### 💼 Portfolio Management APIs
+```http
+GET    /api/portfolios                     # List all portfolios
+POST   /api/portfolios                     # Create new portfolio
+PUT    /api/portfolios/{id}                # Update portfolio
+DELETE /api/portfolios/{id}                # Delete portfolio
+POST   /api/portfolios/{id}/holdings       # Add stock to portfolio
+DELETE /api/portfolios/{id}/holdings/{symbol} # Remove stock
+```
 
-## 🧪 Testing
+#### 🧠 Analytics & ML APIs
+```http
+POST   /api/predictions/stock              # Generate LSTM predictions
+GET    /api/predictions/accuracy           # Model accuracy metrics
+POST   /api/sentiment/analyze              # Text sentiment analysis
+GET    /api/sentiment/market               # Market sentiment overview
+```
+
+#### 🔄 Real-time WebSocket Topics
+```
+/topic/stock-updates        # Live stock price updates
+/topic/portfolio-updates    # Portfolio value changes
+/topic/market-alerts        # Breaking market news
+/topic/sentiment-updates    # Sentiment analysis results
+```
+
+## 🧪 Testing & Quality
 
 ### Backend Testing
 ```bash
 cd backend
-mvn test
+mvn test                    # Run unit tests
+mvn verify                  # Run integration tests
+mvn jacoco:report          # Generate test coverage report
 ```
 
 ### Frontend Testing
 ```bash
 cd frontend
-npm test
+npm test                    # Run Jest unit tests
+npm run test:coverage      # Generate coverage report
+npm run lint               # Run ESLint code analysis
 ```
 
-## 🚀 Deployment
+### Code Quality Metrics
+- **Backend**: JUnit 5, Mockito, Spring Boot Test
+- **Frontend**: Jest, React Testing Library, ESLint
+- **API Testing**: Postman collection included
+- **Performance**: JMeter test scripts available
 
-### Production Backend
-1. Configure PostgreSQL database in `application-prod.yml`
-2. Build production JAR: `mvn clean package -Pprod`
-3. Deploy JAR to your server
-4. Set environment variables for API keys
+## 🚀 Deployment & Production
 
-### Production Frontend
-1. Build production bundle: `npm run build`
-2. Deploy build folder to web server
-3. Configure proxy for API calls
+### Docker Deployment (Recommended)
+```bash
+# Backend
+docker build -t financial-backend ./backend
+docker run -p 8080:8080 financial-backend
+
+# Frontend  
+docker build -t financial-frontend ./frontend
+docker run -p 3000:3000 financial-frontend
+```
+
+### Traditional Deployment
+```bash
+# Backend production build
+cd backend
+mvn clean package -Pprod
+java -jar target/analytics-platform-0.0.1-SNAPSHOT.jar
+
+# Frontend production build
+cd frontend
+npm run build
+# Deploy build/ directory to web server (Nginx, Apache, etc.)
+```
+
+### Environment Configuration
+- **Development**: H2 in-memory database
+- **Production**: PostgreSQL with connection pooling
+- **API Keys**: Environment variables for security
+- **Monitoring**: Spring Actuator endpoints enabled
+
+## 🎯 Key Learning Outcomes
+
+This project demonstrates proficiency in:
+
+### **Full-Stack Development**
+- ✅ Modern Java development with Spring Boot 3
+- ✅ React 18 with hooks and functional components
+- ✅ RESTful API design and implementation
+- ✅ Real-time communication with WebSockets
+
+### **Data Engineering**
+- ✅ External API integration and data processing
+- ✅ Database design and JPA/Hibernate ORM
+- ✅ Real-time data streaming and caching
+- ✅ Automated data fetching with scheduled jobs
+
+### **Machine Learning Integration**
+- ✅ LSTM neural networks for time series prediction
+- ✅ Natural Language Processing for sentiment analysis
+- ✅ Model training, validation, and deployment
+- ✅ Performance metrics and accuracy tracking
+
+### **Software Engineering Best Practices**
+- ✅ Clean architecture with separation of concerns
+- ✅ Comprehensive testing (unit, integration, end-to-end)
+- ✅ Version control with Git and GitHub
+- ✅ Documentation and code quality standards
 
 ## 🤝 Contributing
 
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### Development Process
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
@@ -258,182 +308,44 @@ npm test
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## 👨‍💻 About the Developer
 
-**Sahil** - [GitHub](https://github.com/Sahil0502)
+**Sahil** - Full Stack Developer specializing in Financial Technology
+
+- 🔗 **GitHub**: [@Sahil0502](https://github.com/Sahil0502)
+- � **LinkedIn**: [Connect with me](https://linkedin.com/in/sahil0502)
+- 📧 **Email**: Contact via GitHub
+
+### Skills Demonstrated
+- **Backend**: Java, Spring Boot, JPA/Hibernate, RESTful APIs
+- **Frontend**: React, JavaScript, HTML5/CSS3, Bootstrap
+- **Database**: H2, PostgreSQL, SQL optimization
+- **DevOps**: Maven, Docker, CI/CD, Git
+- **ML/AI**: LSTM, NLP, Sentiment Analysis, Predictive Modeling
+- **Financial**: Market data analysis, Portfolio management, Trading systems
 
 ## 🙏 Acknowledgments
 
-- [Finnhub.io](https://finnhub.io/) for providing free stock market API
-- [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/) for sentiment analysis
-- [Chart.js](https://www.chartjs.org/) for beautiful charts
-- [Spring Boot](https://spring.io/projects/spring-boot) for the robust backend framework
-- [React](https://reactjs.org/) for the dynamic frontend
+- **[Finnhub.io](https://finnhub.io/)** - Comprehensive financial market data API
+- **[Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/)** - Advanced natural language processing
+- **[Chart.js](https://www.chartjs.org/)** - Beautiful and responsive charts
+- **[Spring Framework](https://spring.io/)** - Enterprise Java development platform
+- **[React](https://reactjs.org/)** - Modern frontend library
 
-## 📞 Support
+## 📞 Support & Questions
 
-If you have any questions or need help with setup, please open an issue on GitHub or contact the maintainer.
+- 🐛 **Bug Reports**: [Create an issue](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/issues)
+- 💡 **Feature Requests**: [Start a discussion](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/discussions)
+- 📧 **General Questions**: Contact via GitHub
 
 ---
 
-⭐ **Star this repository if you found it helpful!**
+<div align="center">
 
-1. Navigate to the backend directory:
-```bash
-cd backend
-```
+### ⭐ If this project helped you learn something new, please give it a star! ⭐
 
-2. Install dependencies and run:
-```bash
-mvn clean install
-mvn spring-boot:run
-```
+**[🔗 View Live Demo](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform)** | **[📖 Documentation](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/wiki)** | **[🐛 Report Bug](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/issues)**
 
-The backend will start on `http://localhost:8080`
+*Built with ❤️ for the developer community*
 
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-```bash
-cd frontend
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm start
-```
-
-The frontend will start on `http://localhost:3000`
-
-## API Configuration
-
-The application uses the Finnhub API for real-time market data. The API key is configured in `backend/src/main/resources/application.yml`:
-
-```yaml
-finnhub:
-  api:
-    key: d2go7v1r01qq1lhvukcgd2go7v1r01qq1lhvukd0
-    base-url: https://finnhub.io/api/v1
-```
-
-## API Endpoints
-
-### Stock Data
-- `GET /api/stocks/{symbol}/quote` - Get real-time stock quote
-- `GET /api/stocks/{symbol}/latest` - Get latest stored stock data
-- `GET /api/stocks/{symbol}/history` - Get historical data
-- `POST /api/stocks/predict` - Generate LSTM predictions
-
-### Portfolio Management
-- `GET /api/portfolios` - Get all portfolios
-- `POST /api/portfolios` - Create new portfolio
-- `POST /api/portfolios/{id}/holdings` - Add holding to portfolio
-- `DELETE /api/portfolios/{id}/holdings/{symbol}` - Remove holding
-
-### Sentiment Analysis
-- `POST /api/sentiment/analyze` - Analyze text sentiment
-- `POST /api/sentiment/market` - Analyze market sentiment from headlines
-
-## WebSocket Topics
-
-- `/topic/stock-updates` - Real-time stock price updates
-- `/topic/portfolio-updates` - Portfolio value updates
-- `/topic/market-alerts` - Market alerts and notifications
-
-## Features Overview
-
-### 1. Dashboard
-- Real-time market activity chart
-- Portfolio summaries
-- Live stock updates
-- Market overview table
-
-### 2. Stock Analysis
-- Interactive price charts (Line, Bar)
-- Historical data visualization
-- Real-time quote fetching
-- Volume analysis
-
-### 3. Portfolio Management
-- Create and manage multiple portfolios
-- Add/remove stock holdings
-- Portfolio allocation charts (Doughnut)
-- Performance tracking (Bar charts)
-- Risk assessment calculations
-
-### 4. LSTM Predictions
-- Generate stock price predictions (1-30 days)
-- Confidence scoring
-- Historical vs predicted price visualization
-- Multiple prediction models
-
-### 5. Sentiment Analysis
-- Individual text sentiment analysis
-- Market sentiment from news headlines
-- Sentiment history tracking
-- Visual sentiment distribution
-
-## Architecture
-
-```
-Frontend (React) ←→ REST APIs ←→ Backend (Spring Boot)
-     ↓                              ↓
-WebSocket Client ←→ WebSocket Server
-     ↓                              ↓
-Real-time UI ←→ Real-time Data Processing
-                                   ↓
-                            External APIs (Finnhub)
-```
-
-## Database Schema
-
-The application uses H2 in-memory database with the following entities:
-- `StockData` - Historical stock prices and data
-- `Portfolio` - Portfolio information
-- `PortfolioHolding` - Individual stock holdings
-
-## Development
-
-### Adding New Features
-1. Backend: Add controllers, services, and models in respective packages
-2. Frontend: Add components in `src/components/`
-3. Update API service in `src/services/ApiService.js`
-
-### Testing
-- Backend: Run `mvn test`
-- Frontend: Run `npm test`
-
-## Production Deployment
-
-### Backend
-```bash
-mvn clean package
-java -jar target/analytics-platform-0.0.1-SNAPSHOT.jar
-```
-
-### Frontend
-```bash
-npm run build
-# Deploy build/ directory to web server
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License.
-
-## Support
-
-For support and questions, please create an issue in the repository.
+</div>
