@@ -313,7 +313,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Sahil** - Full Stack Developer specializing in Financial Technology
 
 - 🔗 **GitHub**: [@Sahil0502](https://github.com/Sahil0502)
-- � **LinkedIn**: [Connect with me](https://linkedin.com/in/sahil0502)
+- � **LinkedIn**: [Connect with me](https://www.linkedin.com/in/sahil-singh-ss9824/)
 - 📧 **Email**: Contact via GitHub
 
 ### Skills Demonstrated
