@@ -336,7 +336,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - 🐛 **Bug Reports**: [Create an issue](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/issues)
 - 💡 **Feature Requests**: [Start a discussion](https://github.com/Sahil0502/Intelligent-Financial-Analytics-Platform/discussions)
-- 📧 **General Questions**: Contact via GitHub
+- 📧 **General Questions**: [sahilsinghm32@gmail.com]
 
 ---
 
